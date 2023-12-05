@@ -1,2 +1,3 @@
-# obsidian-vault
-obsidian 연동
+
+- Obsidian을 이용해서 작성한 글들의 보관소 입니다.
+- 주로 강의 정리 및 개념 정리를 위해서 사용하고 있습니다.
