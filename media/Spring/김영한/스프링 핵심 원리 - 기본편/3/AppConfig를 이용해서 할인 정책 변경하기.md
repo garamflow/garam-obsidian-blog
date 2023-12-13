@@ -438,8 +438,8 @@ AppConfig ^2NNf3wIG
 		},
 		{
 			"type": "arrow",
-			"version": 355,
-			"versionNonce": 253193197,
+			"version": 1021,
+			"versionNonce": 1626959779,
 			"isDeleted": false,
 			"id": "qmK3vSf2InZQIMnJv4gKV",
 			"fillStyle": "solid",
@@ -466,7 +466,7 @@ AppConfig ^2NNf3wIG
 					"id": "tBzOjnZy"
 				}
 			],
-			"updated": 1702353120758,
+			"updated": 1702454005739,
 			"link": null,
 			"locked": false,
 			"startBinding": {
