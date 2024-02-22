@@ -56,10 +56,10 @@ Product product = Product.builder()
 
 ## 5) `@Builder.Default`
 - `@Builder.Default`는 `@Builder`를 사용하여 객체를 생성할 때 필드에 기본 값을 설정하는 데 사용된다.
-- @Builder.Default는 특정 필드에 기본값을 명시적으로 지정하고자 할 때 필드 레벨에서 사용됩니다. 이를 통해 객체 생성 시 해당 필드가 명시적으로 값이 할당되지 않았을 경우, 지정한 기본값을 자동으로 사용하게 합니다.
+- `@Builder.Default`는 특정 필드에 기본값을 명시적으로 지정하고자 할 때 필드 레벨에서 사용된다. 이를 통해 객체 생성 시 해당 필드가 명시적으로 값이 할당되지 않았을 경우, 지정한 기본값을 자동으로 사용하게 한다.
 
-사용 예시
-
+### (1) 사용 예시
+```java
 import lombok.Data;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -75,12 +75,10 @@ public class ExampleClass {
     @Builder.Default
     private boolean active = true; // 기본값으로 true 설정
 }
+```
+- 위 예시에는 `ExampleClass`에 대해 `@Data`를 사용하여 기본적인 메소드들을 자동으로 생성한다.
+- `@Builder`와 `@Builder.Default`를 사용하여 객체 생성 시 active 필드에 기본값으로 true를 설정하게 한다.
 
-위 예시에서는 ExampleClass에 대해 @Data를 사용하여 기본적인 메소드들을 자동으로 생성하고, @Builder와 @Builder.Default를 사용하여 객체 생성 시 active 필드에 기본값으로 true를 설정하게 합니다.
-
-언제 사용하는가?
-
-
-	•	@Builder.Default는 객체 생성 시 특정 필드에 기본값을 제공하고자 할 때 사용됩니다. 이는 불변 객체 생성 또는 복잡한 객체 생성에 있어서 유연성과 명확성을 제공합니다.
-
-Lombok을 사용하면 개발자는 반복적인 코드 작성으로부터 해방되어, 더 중요한 로직에 집중할 수 있습니다. 단, Lombok은 컴파일 시에 코드를 조작하기 때문에 IDE나 빌드 도구에서 추가적인 설정이 필요할 수 있습니다.
+### (2) `@Builder.Default`는 주로 언제 사용하는가?
+- `@Builder.Default`는 객체 생성 시 특정 필드에 기본값을 제공하고자 할 때 사된다.
+- 이는 불변 객체 생성 또는 복잡한 객체 생성에 있어서 유연성과 명확성을 제공한다.
