@@ -79,6 +79,6 @@ public class ExampleClass {
 - 위 예시에는 `ExampleClass`에 대해 `@Data`를 사용하여 기본적인 메소드들을 자동으로 생성한다.
 - `@Builder`와 `@Builder.Default`를 사용하여 객체 생성 시 active 필드에 기본값으로 true를 설정하게 한다.
 
-### (2) 주로 언제 사용하는가?
+### (2) 언제 사용하는가?
 - `@Builder.Default`는 객체 생성 시 특정 필드에 기본값을 제공하고자 할 때 사된다.
 - 이는 불변 객체 생성 또는 복잡한 객체 생성에 있어서 유연성과 명확성을 제공한다.
