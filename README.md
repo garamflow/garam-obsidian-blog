@@ -1,4 +1,9 @@
-
+# 학습 정리를 위한 보관소입니다.
 - Obsidian을 이용해서 작성한 글들의 보관소 입니다.
-- 주로 강의 정리 및 개념 정리를 위해서 사용하고 있습니다.
+- 학습한 내용을 정리하기 위해 사용하고 있습니다.
 
+## 목차
+- ### [서적](/서적/서적.md)
+- ### [Java](/Java/Java.md)
+- ### [Spring](/Spring/Spring.md)
+- ### [Spring Boot](/Spring%20Boot/Spring%20Boot.md)
