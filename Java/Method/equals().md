@@ -4,7 +4,7 @@
 - 두 객체의 참조가 같은지, 즉 메모리 상 같은 위치를 가리키는지 확인한다.
 - == 연산자와 같은 행동을 한다.
 
-## 사용 예시
+## 예시
 ```java
 String a = new String("test");
 String b = new String("test");

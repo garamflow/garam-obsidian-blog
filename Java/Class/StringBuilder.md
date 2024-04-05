@@ -9,7 +9,7 @@
 - 메모리 효율성: 불필요한 문자열 객체를 생성하지 않아서 메모리 사용을 최적화한다.
 - 유연성: `append()`, `insert()` 등의 메소드들을 제공해서 문자열을 다양한 방식으로 쉽게 조작할 수 있다.
 
-## 사용 예시
+## 예시
 ```java
 StringBuilder sb = new StringBuilder();
 sb.append("Hello");

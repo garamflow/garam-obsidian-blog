@@ -3,6 +3,7 @@
 - 사용자로부터 입력받은 다음 정수를 반환한다.
 - 콘솔 및 UI에서 사용자 입력을 받을 때, 사용되며 해당 메소드를 사용하기 위해서는 `Scanner` 객체를 생성해야 한다.
 
+## 예시
 ```java
 import java.util.Scanner;
 
@@ -19,5 +20,4 @@ public class Main() {
 	}
 }
 ```
-
 - 정수를 제외한 문자열, 실수 등을 입력받으면 `InputMismatchException`을 발생시킨다.
