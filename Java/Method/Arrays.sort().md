@@ -26,4 +26,4 @@ Arrays.sort(numbers, Comparator.reverseOrder());
 
 ## 주의사항
 - 원본 배열을 직접 수정하기 때문에 원본 배열의 순서를 유지하려면, 정렬하기 전에 복사해야 한다.
-- 객체 배열을 정렬 시 모든 요소가 사
+- 객체 배열을 정렬 시 모든 요소가 상호 비교 가능해야 한다. 그렇지 않으면 `ClassCastException`이 발생할 수 있다.
