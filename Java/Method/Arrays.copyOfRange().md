@@ -1,4 +1,4 @@
-# Arrays.copyOfRange()
+ㄴ# Arrays.copyOfRange()
 - `Arrays` 유틸리티 클래스에서 제공하는 메소드이다.
 - 배열의 특정 범위를 복사해서 새로운 배열을 생성하는 데 사용한다.
 
