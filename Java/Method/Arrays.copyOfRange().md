@@ -11,7 +11,7 @@ public static T[] copyOfRange(T[] original, int from, int to)
 - `int to`: 복사를 종료할 인덱스. 이 값은 범위에 포함되지 않는다.
 - 반환 값으로 원본 배열의 `from` 인덱스 부터 `to - 1` 인덱스까지 요소를 포함하는 새 배열을 반환한다.
 
-## 예제
+## 예시
 ```java
 int[] original = {1, 2, 3, 4, 5};
 int[] copied = Arrays.copyOfRange(original, 1, 4); // {2, 3, 4}
