@@ -16,7 +16,7 @@ System.out.println(lowerStr); // hello world
 
 ## Character.toUpperCase(char ch), Character.toLowerCase(char ch)
 - 단일 문자 char에 대해 대문자, 소문자 변환을 수행하기 위해서 사용된다.
-- 단일 문자를 인자로 받아 해당 문자를 변환시키는데, `Character` 클래스의 메소드를 사용하게 된다.
+- 단일 문자를 인자로 받아 해당 문자를 변환시키는데, `Character` 클래스의 메서드를 사용하게 된다.
 
 ```java
 char lowerCase = 'a';
