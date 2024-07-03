@@ -56,7 +56,7 @@ npm create vite@latest
 - package-lock.json
 	- 파일들의 연관관계를 관리하는 파일
 
-## 3. 프로젝트 진입점, 컴포넌트 알아보기
+## 3. 프로젝트 진입점
 ### main.jsx
 ```jsx
 import React from 'react'
@@ -70,5 +70,16 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 	</React.StrictMode>,
 )
 ```
-- root라는 ID를 찾아서 리액트가 해당 컴포넌트를 보여준다.
-- 
+- `root`라는 ID를 찾아서 리액트가 해당 컴포넌트를 보여준다.
+	- `root`는 index.html의 `div` 태그의 아이디이다. 즉, 그곳에 리액트 내용물을 그린다는 의미이다.
+- `<React.StrictMode>`
+	- 개발 시 더 엄격한 모드 적용
+- `<App />`
+	- 실질적으로 작업할 앱 컴포넌트이다.
+	- 사실상 프로젝트 시작 시 가장 먼저 건들여야할 컴포넌트이다.
+
+## 4. 컴포넌트와 jsx
+- 리액트의 컴포넌트 파일은 `App.jsx`와 같이 첫번째 단어를 대문자로 쓴다.
+- `.jsx`는 자바스크립트 익스텐션이다.
+	- 자바스크립트의 return문 안에 HTML, CSS 문법을 사용할 수 있다.
+	- 자바스크립트 문법과 HTML, CSS를 혼합해서 화면을 구성할 수 있다.
