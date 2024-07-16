@@ -14,11 +14,5 @@
 	- PageRouter 의 문제점은 페이지의 요소들이 많으면 다운받고 js bundle을 다운받을 때 까지 Hydration이 홀딩된다.
 	- 그래서 페이지를 클릭해도 반응이 없을 가능성이 있다.
 	- AppRouter에서는 Streaming Server Rendering을 통해서 Hydration을 부분적으로 하게 된다.
-	- 사용자가 
-
-## 1. CSR
-
-
-## 2. SSR
-
-## 3. Hydration
+		- Progressive Hydration = partial, selective
+	- 사용자의 반응이 먼저 들어온 요소 먼저 하던가 화면에 보이는 부분만 Hydration을 한다.
