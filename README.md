@@ -3,10 +3,12 @@
 - 학습한 내용을 정리하기 위해 사용하고 있습니다.
 
 ## 목차
-- ### [서적](/서적/서적.md)
-- ### [Java](/Java/Java.md)
-- ### [Spring](/Spring/Spring.md)
-- ### [Spring Boot](/Spring%20Boot/Spring%20Boot.md)
+- [서적](/서적/서적.md)
+- [JavaScript](/JavaScript/JavaScript.md)
+- [TypeScript](/TypeScript/TypeScript.md)
+- [Java](/Java/Java.md)
+- [Spring](/Spring/Spring.md)
+- [Spring Boot](/Spring%20Boot/Spring%20Boot.md)
 
 ## 문서 작성 표준
 - [문서 작성 표준](/문서%20작성%20표준.md)
