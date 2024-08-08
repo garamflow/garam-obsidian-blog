@@ -35,4 +35,4 @@
 - components directive
 
 ## 3. plugin
-- 
+- daisy UI 등과 같은 것들을 사용할 수 있다.
