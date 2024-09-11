@@ -6,14 +6,15 @@
 ## 목차
 
 - [서적](/서적/서적.md)
+- [Java](/프로그래밍%20언어/Java/Java.md)
 - [JavaScript](/프로그래밍%20언어/JavaScript/JavaScript.md)
 - [TypeScript](/프로그래밍%20언어/TypeScript/TypeScript.md)
-- [Java](/프로그래밍%20언어/Java/Java.md)
 - [Spring](/프레임워크%20및%20라이브러리/Spring/Spring.md)
 - [Spring Boot](/프레임워크%20및%20라이브러리/Spring/Spring%20Boot/Spring%20Boot.md)
-- [Computer Science]
-- [포트폴리오]
-- [기술 면접 대비]
+- [Computer Science](/컴퓨터%20과학%20및%20소프트웨어%20공학/Computer%20Science/Computer%20Science.md)
+- [Algorithm](/컴퓨터%20과학%20및%20소프트웨어%20공학/Algorithm/Algorithm.md)
+- [기술 면접 대비](/기술%20면접%20대비/기술%20면접%20대비.md)
 
 ## 문서 작성 표준
+
 - [문서 작성 표준](/문서%20작성%20표준.md)
