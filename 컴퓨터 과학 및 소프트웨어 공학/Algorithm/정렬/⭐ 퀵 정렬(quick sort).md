@@ -70,3 +70,108 @@ public class Main {
 	}
 }
 ```
+
+```java
+public class QuickSort {
+
+    /***
+     * 배열을 받아 퀵 정렬을 수행하는 메서드
+     * @param array 정렬할 배열
+     */
+    public static void sort(int[] array) {
+        middlePivotSort(array, 0, array.length - 1);
+    }
+    
+    /***
+     * 중간 피벗을 사용하는 퀵 정렬 알고리즘
+     * @param array       정렬할 배열
+     * @param startIndex  현재 부분 배열의 시작 인덱스
+     * @param endIndex    현재 부분 배열의 끝 인덱스
+     */
+    private static void middlePivotSort(int[] array, int startIndex, int endIndex) {
+        
+        /***
+         * 만약 startIndex가 endIndex보다 크거나 같다면 정렬할 원소가 1개 이하이므로 종료
+         */
+        if (startIndex >= endIndex) {
+            return;
+        }
+        
+        /***
+         * 배열을 분할하여 피벗의 위치를 얻은 후,
+         * 피벗을 기준으로 왼쪽 부분과 오른쪽 부분을 재귀적으로 정렬
+         */
+        int pivotIndex = partition(array, startIndex, endIndex);   
+        
+        middlePivotSort(array, startIndex, pivotIndex);
+        middlePivotSort(array, pivotIndex + 1, endIndex);
+    }
+    
+    /***
+     * 피벗을 기준으로 배열을 분할하는 메서드
+     * @param array       정렬할 배열 
+     * @param startIndex  현재 부분 배열의 시작 인덱스
+     * @param endIndex    현재 부분 배열의 끝 인덱스
+     * @return            피벗의 최종 위치 인덱스(rightPointer)를 반환
+     */
+    private static int partition(int[] array, int startIndex, int endIndex) {
+        
+        /***
+         * leftPointer와 rightPointer를 설정
+         * leftPointer는 startIndex - 1로 초기화
+         * rightPointer는 endIndex + 1로 초기화
+         */
+        int leftPointer = startIndex - 1;
+        int rightPointer = endIndex + 1;
+        
+        /***
+         * 피벗을 부분 배열의 중간 요소로 설정
+         */
+        int pivot = array[(startIndex + endIndex) / 2];  // 중간 인덱스의 값 선택
+     
+        while (true) {
+            
+            /***
+             * leftPointer를 증가시키면서 피벗보다 크거나 같은 요소를 찾음
+             */
+            do { 
+                leftPointer++; 
+            } while (array[leftPointer] < pivot);
+     
+            /***
+             * rightPointer를 감소시키면서 피벗보다 작거나 같은 요소를 찾음
+             * leftPointer가 rightPointer보다 작거나 같은 동안에만 반복
+             */
+            do {
+                rightPointer--;
+            } while (array[rightPointer] > pivot && leftPointer <= rightPointer);
+            
+            /***
+             * 만약 leftPointer가 rightPointer보다 크거나 같다면 분할을 마치고 rightPointer 반환
+             */
+            if (leftPointer >= rightPointer) {
+                return rightPointer;
+            }
+            
+            /***
+             * 찾은 leftPointer와 rightPointer의 요소를 교환
+             */
+            swap(array, leftPointer, rightPointer);
+        }
+        
+    }
+    
+    /***
+     * 배열의 두 요소를 교환하는 메서드
+     * @param array 교환할 배열
+     * @param index1 첫 번째 요소의 인덱스
+     * @param index2 두 번째 요소의 인덱스
+     */
+    private static void swap(int[] array, int index1, int index2) {
+        int temp = array[index1];  // 임시 변수에 array[index1] 저장
+        array[index1] = array[index2];  // array[index1]에 array[index2] 값 대입
+        array[index2] = temp;      // array[index2]에 임시 변수 값 대입
+    }
+    
+}
+```
