@@ -34,3 +34,6 @@
 - - set 으로 저장
 - SecurityContext contextLocal = threadLocal.get() 으로 찾아오기
 - threadLocal.remove(); //다 쓰고 나면 제거한다 -> FilterChainProxy
+
+BFS - 최단 거리는 BFS!
+- 
