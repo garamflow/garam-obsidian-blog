@@ -27,3 +27,10 @@
 	- 이미 방문한 노드를 다시 방문할 가능성이 있다.
 - 미로 찾기, 퍼즐 게임 등에 유용하다.
 	- 가능한 모든 경로를 탐색하며, 해결책을 찾을 때까지 깊이 탐색한다.
+
+스레드로컬
+- 스레드에 작은 데이터베이스를 넣는것
+- ThreadLocal<SecurityContext> threadLocal = next ThreadLocal<>();
+- - set 으로 저장
+- SecurityContext contextLocal = threadLocal.get() 으로 찾아오기
+- threadLocal.remove(); //다 쓰고 나면 제거한다 -> FilterChainProxy
