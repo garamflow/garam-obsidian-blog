@@ -36,6 +36,11 @@
 - DFS와는 탐색 순서가 다르다.
 ![BFS_3](/media/컴퓨터%20과학%20및%20소프트웨어%20공학/Algorithm/BFS_3.png)
 
+### 주로 사용하는 틀
+```java
+
+```
+
 
 
 ## 깊이 우선 탐색(DFS, Depth-First Search)
