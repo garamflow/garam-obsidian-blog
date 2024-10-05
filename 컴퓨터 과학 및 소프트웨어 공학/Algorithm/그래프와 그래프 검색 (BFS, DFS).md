@@ -38,6 +38,57 @@
 
 ### 주로 사용하는 틀
 ```java
+import java.io.*;
+import java.util.*;
+
+public class BFSExample {
+    static boolean[] visited; // 방문 여부를 기록하는 배열
+    static List<Integer>[] graph; // 그래프의 인접 리스트 표현
+    static int n; // 노드의 개수
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        n = Integer.parseInt(st.nextToken()); // 노드의 개수
+        int m = Integer.parseInt(st.nextToken()); // 간선의 개수
+        int start = Integer.parseInt(st.nextToken()); // 시작 정점
+
+        graph = new ArrayList[n + 1];
+        for (int i = 1; i <= n; i++) {
+            graph[i] = new ArrayList<>();
+        }
+
+        for (int i = 0; i < m; i++) {
+            st = new StringTokenizer(br.readLine());
+            int u = Integer.parseInt(st.nextToken());
+            int v = Integer.parseInt(st.nextToken());
+            graph[u].add(v);
+            graph[v].add(u); // 무방향 그래프이므로 양쪽에 추가
+        }
+
+        visited = new boolean[n + 1]; // 방문 여부 초기화
+        bfs(start);
+    }
+
+    static void bfs(int start) {
+        Deque<Integer> queue = new ArrayDeque<>();
+        queue.offer(start);
+        visited[start] = true; // 시작 정점을 방문했다고 표시
+
+        while (!queue.isEmpty()) {
+            int currentNode = queue.poll();
+            System.out.println("Visited node: " + currentNode);
+
+            for (int nextNode : graph[currentNode]) {
+                if (!visited[nextNode]) {
+                    visited[nextNode] = true; // 인접 노드를 방문했다고 표시
+                    queue.offer(nextNode);
+                }
+            }
+        }
+    }
+}
 
 ```
 
