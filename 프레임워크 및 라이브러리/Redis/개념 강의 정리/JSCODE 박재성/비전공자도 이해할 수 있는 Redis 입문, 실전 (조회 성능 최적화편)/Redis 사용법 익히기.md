@@ -74,10 +74,11 @@ del test:testvalue
 레디스의 특성상 메모리 공간이 한정 되어 있기 때문에 모든 데이터를 레디스에 저장할 수 없다. 따라서 만료시간(TTL)을 활용해 자주 사용하는 데이터만 레디스에 저장해놓고 쓰는 식으로 활용한다.
 ```shell
 # set key이름 value ex seconds
+set test:testvalue3 test ex 30
 
 # ttl key이름
 # 남은 시간 출력, 키가 삭제되면 -2가 반환된다.
 # 키가 존재하지만 ttl이 설정되있지 않으면 -1이 반환된다.
-
+ttl test:test
 
 ```
