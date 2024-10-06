@@ -32,6 +32,11 @@ PONG
 
 ## 2. Redis 기본 명령어 익히기
 ### 데이터(Key, Value) 저장하기
+```sql
+set key:value value값
+
+set test:testvalue "test good"
+set test:testvalue2 test
 ```
 
-```
+### 데
