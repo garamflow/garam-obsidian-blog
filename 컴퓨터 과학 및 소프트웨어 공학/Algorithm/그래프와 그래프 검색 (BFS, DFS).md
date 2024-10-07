@@ -108,6 +108,75 @@ public class BFSExample {
 
 ```
 
+```java
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.StringTokenizer;
+
+public class BFS_2D_Array {
+    static int[][] graph;
+    static boolean[][] visited;
+    static int[] dx = {-1, 1, 0, 0}; // 상, 하, 좌, 우
+    static int[] dy = {0, 0, -1, 1}; // 상, 하, 좌, 우
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        // 2차원 배열 크기 입력받기 (예시: 행과 열 크기)
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int rows = Integer.parseInt(st.nextToken());
+        int cols = Integer.parseInt(st.nextToken());
+
+        // 2차원 배열 초기화
+        graph = new int[rows][cols];
+        visited = new boolean[rows][cols];
+
+        // 배열의 값 입력받기
+        for (int i = 0; i < rows; i++) {
+            st = new StringTokenizer(br.readLine());
+            for (int j = 0; j < cols; j++) {
+                graph[i][j] = Integer.parseInt(st.nextToken());
+            }
+        }
+
+        // BFS 시작점 예시 (0, 0)에서 시작
+        bfs(0, 0);
+    }
+
+    static void bfs(int startX, int startY) {
+        Deque<int[]> queue = new ArrayDeque<>();
+        queue.add(new int[]{startX, startY});
+        visited[startX][startY] = true;
+
+        while (!queue.isEmpty()) {
+            int[] current = queue.poll();
+            int x = current[0];
+            int y = current[1];
+
+            // 현재 위치 처리 (필요한 로직을 여기에 추가)
+            System.out.println("Visited: (" + x + ", " + y + ")");
+
+            // 인접한 네 방향 탐색
+            for (int i = 0; i < 4; i++) {
+                int newX = x + dx[i];
+                int newY = y + dy[i];
+
+                // 배열 범위 내에 있는지, 이미 방문했는지 체크
+                if (newX >= 0 && newX < graph.length && newY >= 0 && newY < graph[0].length) {
+                    if (!visited[newX][newY]) {
+                        visited[newX][newY] = true;
+                        queue.add(new int[]{newX, newY});
+                    }
+                }
+            }
+        }
+    }
+}
+
+```
 
 
 ## 깊이 우선 탐색(DFS, Depth-First Search)
