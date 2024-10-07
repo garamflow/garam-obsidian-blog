@@ -59,7 +59,7 @@ import java.util.*;
 
 public class BFSExample {
     static boolean[] visited; // 방문 여부를 기록하는 배열
-    static List<Integer>[] graph; // 그래프의 인접 리스트 표현
+    static ArrayList<Integer>[] graph; // 그래프의 인접 리스트 표현
     static int n; // 노드의 개수
 
     public static void main(String[] args) throws IOException {
