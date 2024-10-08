@@ -37,5 +37,5 @@ sum(10, '20'); // error
 
 ```typescript
 const divElement = document.querySelector('div');
-divElement?.메소드
+divElement?.메서드
 ```
