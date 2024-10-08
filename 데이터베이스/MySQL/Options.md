@@ -1,6 +1,6 @@
 # Options
 ## createDatabaseIfNotExist=true
-```xml
+```yaml
 spring:  
   profiles:  
     default: local  
