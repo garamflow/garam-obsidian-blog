@@ -1,5 +1,5 @@
 # Options
-## createDatabaseIfNotExist=true
+## `createDatabaseIfNotExist=true`
 ```yaml
 spring:  
   profiles:  
