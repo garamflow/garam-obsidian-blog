@@ -22,7 +22,7 @@ public String greet(@RequestParam String name) {
 - 기본값 설정 가능: `@RequestParam(defaultValue = "Guest")`로 기본값 설정 가능.
 
 ## 2. @RequestBody
-- **역할**: HTTP 요청의 **본문(body)**에 있는 데이터를 컨트롤러 메서드의 파라미터로 바인딩하는 데 사용됩니다.
+- **역할**: HTTP 요청의 **본문(body)** 에 있는 데이터를 컨트롤러 메서드의 파라미터로 바인딩하는 데 사용됩니다.
 - **사용 사례**: 주로 `POST`, `PUT`, `PATCH` 요청에서 **JSON, XML, 또는 다른 형식의 데이터를 처리**할 때 사용합니다.
 - **형식**: JSON, XML 등 직렬화된 데이터 구조를 처리합니다. (Spring은 자동으로 객체로 변환해줍니다.)
 
