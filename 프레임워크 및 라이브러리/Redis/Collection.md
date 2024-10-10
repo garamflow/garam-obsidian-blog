@@ -23,7 +23,18 @@
 - ZADD, ZRANGE같은 명령어를 Sorted Set에 활용할 수 있다.
 
 ## 4. Hashes Collection
-
+- 하나의 Key에 대해서 여러개의 Field와 Value로 구성되어 있다. 마치 RDB의 테이블과 유사하다.
+	- Key는 PK, Field는 Column, Value는 Raw
+	- 단, 여기서는 레디스의 필드는 40억개까지 가능하다. 또한 RDB에 비해서 레디스가 더 자유롭다.
+- HSET: 저장
+	- HSETNX, HMSET: 
+- HGET key field: 
+- HSCAN
+- HEXISTS
+- HKEYS
+	- 사용하지 않는걸 추천한다. 단일 스레드?
 
 
 ## 5. BitMaps Collection
+
+- 특정 기능
