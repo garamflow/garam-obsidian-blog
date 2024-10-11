@@ -30,3 +30,6 @@ docker logs [컨테이너 ID 또는 컨테이너명]
 > 3. **"Add Property"** 버튼을 클릭합니다.
 > 4. `allowPublicKeyRetrieval`이라는 속성을 추가하고, 값을 `true`로 설정합니다.
 
+![mysql_container_connect](/media/도구%20및%20환경/Docker/mysql_container_connect.webp)
+
+## 2. 
