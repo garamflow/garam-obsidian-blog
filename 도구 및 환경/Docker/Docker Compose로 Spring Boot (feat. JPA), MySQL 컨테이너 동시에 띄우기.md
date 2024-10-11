@@ -25,12 +25,22 @@ spring:
 
 4. Dockerfile 작성하기
 ```docker
+# 베이스 이미지 선택
 FROM openjdk:17-jdk
 
+# 애플리케이션 jar 파일을 복사
 COPY build/libs/*SNAPSHOT.jar /app.jar
 
+# Install bash  
+RUN apk update && apk add bash  
+  
+# Set bash as the default shell  
+CMD ["/bin/bash"]
+
+# 애플리케이션 실행
 ENTRYPOINT ["java", "-jar", "/app.jar"]
-ENTRYPOINT ["/bin/bash", "-c", "sleep 500"] # 500초 동안 시스템을 일시정지 시키는 명령어
+# 500초 동안 시스템을 일시정지 시키는 명령어
+ENTRYPOINT ["/bin/bash", "-c", "sleep 500"]
 ```
 
 5. compose.yml 작성하기
