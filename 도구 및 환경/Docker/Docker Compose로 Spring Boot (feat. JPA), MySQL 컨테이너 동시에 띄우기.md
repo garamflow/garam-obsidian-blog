@@ -30,6 +30,7 @@ FROM openjdk:17-jdk
 COPY build/libs/*SNAPSHOT.jar /app.jar
 
 ENTRYPOINT ["java", "-jar", "/app.jar"]
+ENTRYPOINT ["/bin/bash", "-c", "sleep 500"] # 500초 동안 시스템을 일시정지 시키는 명령어
 ```
 
 5. compose.yml 작성하기
