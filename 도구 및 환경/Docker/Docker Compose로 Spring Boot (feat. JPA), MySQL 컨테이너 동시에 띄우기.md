@@ -56,5 +56,21 @@ services:
 
 6. Spring Boot 프로젝트 빌드하기
 ```bash
-
+./gradlew clean build
 ```
+
+7. compose 파일 실행시키기
+```bash
+docker compose up -d --build
+```
+
+8. compose 실행 현황 보기
+```bash
+$ docker compose ps
+$ docker ps
+$ docker logs [Container ID]
+```
+
+## 컨테이너로 실행시킨 Spring Boot가 MySQL에 연결이 안 되는 이유
+![springboot_mysql_not_connect](/media/도구%20및%20환경/Docker/springboot_mysql_not_connect.webp)
+
