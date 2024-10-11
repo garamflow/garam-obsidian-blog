@@ -37,6 +37,7 @@ RUN apk update && apk add bash
 # Set bash as the default shell  
 CMD ["/bin/bash"]
 
+# 하나만 적용된다.
 # 애플리케이션 실행
 ENTRYPOINT ["java", "-jar", "/app.jar"]
 # 500초 동안 시스템을 일시정지 시키는 명령어
