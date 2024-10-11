@@ -45,4 +45,24 @@ docker run -e MYSQL_ROOT_PASSWORD=password123 -p 3306:3306 -v /Users/jaeseong/Do
 - `pwd` 명령어로 볼륨으로 사용하고자 하는 경로를 확인한 뒤 입력해주자.
 - **주의)** `mysql_data` 디렉토리를 미리 만들어 놓으면 안 된다. 그래야 처음 이미지를 실행시킬 때 mysql 내부에 있는 `/var/lib/mysql` 파일들을 호스트 컴퓨터로 공유받을 수 있다. `mysql_data` 디렉토리를 미리 만들어놓을 경우, 기존 컨테이너의 `/var/lib/mysql` 파일들을 전부 삭제한 뒤에 `mysql_data`로 덮어씌워 버린다.
 - DB에 관련된 데이터가 저장되는 곳이 `/var/lib/mysql`인지는 Dockerhub MySQL의 공식 문서에 나와있다.
+![mysql_volume](/media/도구%20및%20환경/Docker/mysql_volume.webp)
 
+### 2.2 MySQL 컨테이너 삭제하고 다시 띄워보기
+```bash
+# 컨테이너 종료
+$ docker stop [MySQL 컨테이너 ID]
+$ docker rm [MySQL 컨테이너 ID]
+
+# 비밀번호 바꿔서 컨테이너 생성
+$ docker run -e MYSQL_ROOT_PASSWORD=**pwd1234** -p 3306:3306 -v /Users/jaeseong/Documents/Develop/docker-mysql/mysql_data:/var/lib/mysql -d mysql
+
+$ docker exec -it [MySQL 컨테이너 ID] bash
+$ mysql -u root -p # 접속이 안 됨...
+```
+
+> 분명 `MYSQL_ROOT_PASSWORD` 값을 바꿔서 새로 컨테이너를 띄웠는데 비밀번호는 바뀌지 않은걸까? 이 부분 때문에 많은 분들이 헤맨다.
+
+그 이유는 Volume으로 설정해둔 폴더에 이미 비밀번호 정보가 저장되버렸기 때문이다.
+이럴 때는 이미 저장된 MySQL에 접속해서 비밀번호를 바꾸거나 mysql_data에 저장된 것을 모두 삭제하고 다시 올려야한다.
+
+## 3. 
