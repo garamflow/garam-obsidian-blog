@@ -32,4 +32,12 @@ docker logs [컨테이너 ID 또는 컨테이너명]
 
 ![mysql_container_connect](/media/도구%20및%20환경/Docker/mysql_container_connect.webp)
 
-## 2. 
+## 2. Volume 이용하기
+### 2.1 Volume 이용해서 MySQL 컨테이너 띄우기
+```bash
+$ cd /Users/jaeseong/Documents/Develop
+$ mkdir docker-mysql # MySQL 데이터를 저장하고 싶은 폴더 만들기
+
+# docker run -e MYSQL_ROOT_PASSWORD=password123 -p 3306:3306 -v {호스트의 절대경로}/mysql_data:/var/lib/mysql -d mysql
+$ docker run -e MYSQL_ROOT_PASSWORD=password123 -p 3306:3306 -v /Users/jaeseong/Documents/Develop/docker-mysql/mysql_data:/var/lib/mysql -d mysql
+```
