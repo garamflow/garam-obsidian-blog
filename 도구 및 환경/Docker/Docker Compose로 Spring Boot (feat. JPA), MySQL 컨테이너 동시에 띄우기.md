@@ -10,13 +10,10 @@ Spring Boot + JPA + MySQL 프로젝트를 컨테이너 띄워본다.
 ```yml
 spring:
 	datasource:
-		# url: jdbc:mysql://데이터베이스주소:포트번호/데이터베이스이름
 		url: jdbc:mysql://localhost:3306/mydb
 		username: root
 		password: password
 		driver-class-name: com.mysql.cj.jdbc.Driver
 		
 ```
-- `url: jdbc:mysql://localhost:3306/mydb`
-	- JDBC를 사용하여 `localhost`에 있는 MySQL 서버의 `mydb`라는 데이터베이스에 연결하는 URL이라는 의미
 - 
