@@ -54,7 +54,7 @@ services:
       retries: 10 # 10번까지 재시도
 ```
 
+6. Spring Boot 프로젝트 빌드하기
+```bash
 
-
-
-
+```
