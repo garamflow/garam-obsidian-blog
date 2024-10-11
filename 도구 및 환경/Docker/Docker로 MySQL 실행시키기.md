@@ -35,9 +35,14 @@ docker logs [컨테이너 ID 또는 컨테이너명]
 ## 2. Volume 이용하기
 ### 2.1 Volume 이용해서 MySQL 컨테이너 띄우기
 ```bash
-$ cd /Users/jaeseong/Documents/Develop
-$ mkdir docker-mysql # MySQL 데이터를 저장하고 싶은 폴더 만들기
+	cd /Users/jaeseong/Documents/Develop
+mkdir docker-mysql # MySQL 데이터를 저장하고 싶은 폴더 만들기
+pwd # 현재 위치 주소 알아보기
 
-# docker run -e MYSQL_ROOT_PASSWORD=password123 -p 3306:3306 -v {호스트의 절대경로}/mysql_data:/var/lib/mysql -d mysql
-$ docker run -e MYSQL_ROOT_PASSWORD=password123 -p 3306:3306 -v /Users/jaeseong/Documents/Develop/docker-mysql/mysql_data:/var/lib/mysql -d mysql
+docker run -e MYSQL_ROOT_PASSWORD=password123 -p 3307:3306 -v {호스트의 절대경로}/mysql_data:/var/lib/mysql -d mysql
+docker run -e MYSQL_ROOT_PASSWORD=password123 -p 3306:3306 -v /Users/jaeseong/Documents/Develop/docker-mysql/mysql_data:/var/lib/mysql -d mysql
 ```
+- `pwd` 명령어로 볼륨으로 사용하고자 하는 경로를 확인한 뒤 입력해주자.
+- **주의)** `mysql_data` 디렉토리를 미리 만들어 놓으면 안 된다. 그래야 처음 이미지를 실행시킬 때 mysql 내부에 있는 `/var/lib/mysql` 파일들을 호스트 컴퓨터로 공유받을 수 있다. `mysql_data` 디렉토리를 미리 만들어놓을 경우, 기존 컨테이너의 `/var/lib/mysql` 파일들을 전부 삭제한 뒤에 `mysql_data`로 덮어씌워 버린다.
+- DB에 관련된 데이터가 저장되는 곳이 `/var/lib/mysql`인지는 Dockerhub MySQL의 공식 문서에 나와있다.
+
