@@ -48,7 +48,6 @@ sudo cp /usr/local/mysql/support-files/mysql.server /Library/LaunchDaemons/ sudo
 
 ### 7. **MySQL 서버 중지**
 MySQL 서버를 중지하려면 다음 명령어를 사용할 수 있습니다.
-
 ```bash
 sudo /usr/local/mysql/support-files/mysql.server stop
 ```
