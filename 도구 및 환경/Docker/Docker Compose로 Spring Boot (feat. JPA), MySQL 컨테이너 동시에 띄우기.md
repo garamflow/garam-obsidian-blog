@@ -31,6 +31,7 @@ FROM openjdk:17-jdk
 # 애플리케이션 jar 파일을 복사
 COPY build/libs/*SNAPSHOT.jar /app.jar
 
+# 필요할때만 쓴다.
 # Install bash  
 RUN apk update && apk add bash  
   
