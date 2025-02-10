@@ -1,20 +1,22 @@
 # 스프링 개발 시작하기
-
-
-## 1. 필요사항
 - JDK 17 또는 이후 버전 설치하기
-	- IntelliJ 설치 후 SDK - Download JDK
+	- IntelliJ 설치
+		- File - New Projects Setup - Structure - SDKs - Download JDK
 	- 공개 JDK 다운로드 후 설치
 		- https://aws.amazon.com/corretto
 		- https://adoptium.net/en-GB/temurin/releases/
 	- SDKMAN (https://sdkman.io)
+		- 버전 관리 등에 유용
 		- `sdk intall java [jdk name]`
 		- `sdk java use [jdk name]`
 		- 프로젝트 폴더의 사용 JDK 저장: sdk env init
 		- 프로젝트 폴더의 사용 JDK 복구: sdk env
+			- PC의 기본 설정한 버전이 아니라 해당 폴더에서 다른 버전을 사용하고 싶을 때 사용하면 된다.
+			- 터미널을 종료하면 다시 sdk env로 저장한 버전을 불어와야한다.
+		- `sdk list java`
 - IDE
 	- IntelliJ 등
 - HTTPie
 	- https://httpie.io
-
-## 2. 
+	- `brew install httpie`
+	- `http` 터미널에 입력하면 편하다.
